@@ -8,17 +8,19 @@
 
 ##
 # TODO --- define CC and CFLAGS here
-
+CC = gcc
+CFLAGS = -Wall -Werror -pedantic -std=c99
 ##
 # TODO --- create an `all` rule indicating we want to build `manip`
-
+all: manip
 ##
 # TODO --- create a `manip` rule indicating how to build `manip`
-
+manip: manipFunctions.o
 # Clean gets rid of all the build files we create.
 # TODO --- remove the compiled `manip`
 clean:
 	rm -rf *.o
+	rm -f manip
 
 # You can run `make test` to test against several numbers:
 test: manip

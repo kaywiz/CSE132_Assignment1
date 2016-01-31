@@ -8,29 +8,29 @@
 #include "manipFunctions.h"
 
 int hasAOne(int num) {
-  return 0;
+  return num && 1;
 }
 
 int hasAZero(int num) {
-  return 0;
+  return ~num && 1;
 }
 
 int leastSigHasAOne(int num) {
-  return 0;
+    return (num & 0xff) && 1;
 }
 
 int negate(int num) {
-  return 0;
+  return (num ^ ~0) + 1;
 }
 
 int isNegativeInt(int num) {
-  return 0;
+  return !(( ~(num) & (1<<31)) | !num);
 }
 
 int isNegativeLong(long num) {
-  return 0;
+  return !(( ~(num) & (1<<31)) | !num);
 }
 
 int isNegativeChar(char num) {
-  return 0;
+  return !(( ~(num) & (1<<7)) | !num);
 }
