@@ -3,9 +3,9 @@
  *
  * Fill this out so we know whose lab this is.
  *
- * Name:
- * Lab Partner:
- * Lab Section:
+ * Name: Kelly Wisneski
+ * Lab Partner: Morgan Dentz
+ * Lab Section: A
  */
 
 #include <stdlib.h>
@@ -84,7 +84,10 @@ int main(int argc, char **argv) {
   // Read number and shift, as appropriate.
   long num = strtol(argv[optind], NULL, 10);
   long shifted = num;
-
+  long i = 0;
+  for (i = shift; i>0; i--){
+	shifted  = shifted<<1;
+  }
   printf("Number:  %li\t%#08lx\n", num, num);
   printf("as int:  %i\t%#08x\n", (int)num, (int)num);
   if(shift) {
@@ -93,32 +96,32 @@ int main(int argc, char **argv) {
   printf("Treating number as %d (0: int; 1: long; 2: char)\n", numType);
 
   /* TODO uncomment the following lines until the next TODO */
-  // printf("Function        \tOutput\tHex\n");
-  // printf("hasAZero:       \t%d\t%#x\n", hasAZero(shifted), hasAZero(shifted));
-  // printf("hasAOne:        \t%d\t%#x\n", hasAOne(shifted), hasAOne(shifted));
-  // printf("leastSigHasAOne:\t%d\t%#x\n", 
-  //   leastSigHasAOne(shifted), 
-  //   leastSigHasAOne(shifted));
-  // printf("negate:         \t%d\t%#x\n", negate(shifted), negate(shifted));
+   printf("Function        \tOutput\tHex\n");
+   printf("hasAZero:       \t%d\t%#x\n", hasAZero(shifted), hasAZero(shifted));
+   printf("hasAOne:        \t%d\t%#x\n", hasAOne(shifted), hasAOne(shifted));
+   printf("leastSigHasAOne:\t%d\t%#x\n", 
+     leastSigHasAOne(shifted), 
+     leastSigHasAOne(shifted));
+   printf("negate:         \t%d\t%#x\n", negate(shifted), negate(shifted));
 
-  // switch(numType) {
-  // case INT:
-  //   printf("isNegativeInt:  \t%d\t%#x\n", 
-  //     isNegativeInt(shifted),
-  //     isNegativeInt(shifted));
-  //   break;
-  // case LONG:
-  //   printf("isNegativeLong: \t%d\t%#x\n", 
-  //     isNegativeLong(shifted),
-  //     isNegativeLong(shifted));
-  //   break;
-  // case CHAR:
-  //   printf("isNegativeChar: \t%d\t%#x\n", 
-  //     isNegativeChar(shifted),
-  //     isNegativeChar(shifted));
-  //   break;
-  // }
-  // printf("\n");
+   switch(numType) {
+   case INT:
+     printf("isNegativeInt:  \t%d\t%#x\n", 
+       isNegativeInt(shifted),
+       isNegativeInt(shifted));
+     break;
+   case LONG:
+     printf("isNegativeLong: \t%d\t%#x\n", 
+       isNegativeLong(shifted),
+       isNegativeLong(shifted));
+     break;
+   case CHAR:
+     printf("isNegativeChar: \t%d\t%#x\n", 
+       isNegativeChar(shifted),
+       isNegativeChar(shifted));
+     break;
+   }
+   printf("\n");
   /* TODO uncomment everything above until the previous TODO */
 
   return 0;
