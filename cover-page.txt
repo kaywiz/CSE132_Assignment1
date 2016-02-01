@@ -45,11 +45,9 @@ Is there anything we should know about your work on this assignment: No
 	g. 7 >> 3 == 0
 	h. 3 ^ 5 == 110 = 6
 
-2. What is most negative number you can represent in a two's-complement 3-byte datatype?  Write your answer in terms of 2 to some power. -2^23
-
+2. What is most negative number you can represent in a two's-complement 3-byte datatype?  Write your answer in terms of 2 to some power.
+ -2^23
 3. Explain in a couple of sentences the advantages of breaking your program into multiple files and using header files to declare functions.
-
+It allows you to compile each source file individually, without actually including any other sources.
 4. What is `make`'s implicit rule for compiling `.c` files into `.o` files?
-
-
-
+'n.o' is made automatically form 'n.c' with a command of the form '$(CC) -c $(CPPFLAGS) $(CFLAGS)'.
