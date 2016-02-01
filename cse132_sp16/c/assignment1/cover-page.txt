@@ -41,9 +41,9 @@ Is there anything we should know about your work on this assignment: No
 	c. 5 && 0 == 0
 	d. 5 & 3 == 001 == 1
 	e. !4 == 0
-	f. ~5 == 010
+	f. ~5 == 010 == 2
 	g. 7 >> 3 == 0
-	h. 3 ^ 5 == 110 = 6
+	h. 3 ^ 5 == 110 == 6
 
 2. What is most negative number you can represent in a two's-complement 3-byte datatype?  Write your answer in terms of 2 to some power.
  -2^23
